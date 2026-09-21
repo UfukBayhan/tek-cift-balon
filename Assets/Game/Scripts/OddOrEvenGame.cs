@@ -70,7 +70,6 @@ public class OddOrEvenGame : MonoBehaviour
             targetType = (Random.Range(0, 2) == 0) ? OddOrEven.even : OddOrEven.odd;
 
         remaining = goalCount;
-        //scoreText.text = "Puan: 0";
         UpdateYonergeText();
 
         // spawnpointleri doldur
@@ -144,7 +143,7 @@ public class OddOrEvenGame : MonoBehaviour
         if (info == null)
             return;
         if (info.isCaught)
-            return; // ← ikinci kez tetiklenmesin
+            return;
         info.isCaught = true;
         var btn = catched.GetComponent<Button>();
         if (btn)
@@ -223,15 +222,12 @@ public class OddOrEvenGame : MonoBehaviour
 
     private IEnumerator ResetLevelTransitionWhenSfxEnds()
     {
-        // SoundFX nesnesi ve AudioSource bileşeni var mı kontrol et
         if (SoundFX != null)
         {
             var audioSource = SoundFX.GetComponent<AudioSource>();
 
-            // Eğer AudioSource varsa ve bir ses çalıyorsa, bitmesini bekle
             if (audioSource != null && audioSource.isPlaying)
             {
-                // isPlaying false olana kadar her karede bekle
                 while (audioSource.isPlaying)
                 {
                     yield return null;
@@ -261,7 +257,6 @@ public class OddOrEvenGame : MonoBehaviour
     {
         int clampedIndex = Mathf.Min(index, 100);
 
-        // Grup bilgisi (5'lik gruplar hâlâ geçerli)
         int groupIndex = clampedIndex / 5;
         int groupStart = groupIndex * 5;
         int groupEnd = Mathf.Min(groupStart + 4, 100);
@@ -270,7 +265,6 @@ public class OddOrEvenGame : MonoBehaviour
         // Küçük dalgalar
         float waveGoal = (Mathf.Sin(clampedIndex * Mathf.PI / 18f) + 1f) * 0.5f;
 
-        // --- BASE'LER (yumuşatılmış) ---
         float baseGoal = groupIndex * 1f; // seviye ilerledikçe hafif artış
         float baseSpeed = groupIndex * 0.01f; // daha yumuşak artış (100'de +2.0 civarı)
 
