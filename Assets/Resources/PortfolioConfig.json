@@ -1,0 +1,58 @@
+{
+  "directory": "STEM-OddEven",
+  "repo": "tek-cift-balon",
+  "title": "Odd & Even Balloons",
+  "turkish": "Tek ve Çift Balonlar",
+  "kind": "ODDEVEN",
+  "cls": "OddOrEvenGame",
+  "modes": [
+    {
+      "scene": "CiftSayilar",
+      "title": "Çift Sayılar",
+      "english": "Even numbers",
+      "stemGameType": 1,
+      "isRandom": 0,
+      "isDynamicMode": 0,
+      "isReverseMode": 0,
+      "targetType": 1,
+      "cardMatchGameTargetType": 0,
+      "bubbleGameMode": 0,
+      "step": 3,
+      "x": 0,
+      "y": 50,
+      "operators": []
+    },
+    {
+      "scene": "CiftTekSayilar",
+      "title": "Karışık Hedef",
+      "english": "Mixed parity",
+      "stemGameType": 1,
+      "isRandom": 1,
+      "isDynamicMode": 0,
+      "isReverseMode": 0,
+      "targetType": 0,
+      "cardMatchGameTargetType": 0,
+      "bubbleGameMode": 0,
+      "step": 3,
+      "x": 0,
+      "y": 50,
+      "operators": []
+    },
+    {
+      "scene": "TekSayilar",
+      "title": "Tek Sayılar",
+      "english": "Odd numbers",
+      "stemGameType": 1,
+      "isRandom": 0,
+      "isDynamicMode": 0,
+      "isReverseMode": 0,
+      "targetType": 0,
+      "cardMatchGameTargetType": 0,
+      "bubbleGameMode": 0,
+      "step": 3,
+      "x": 0,
+      "y": 50,
+      "operators": []
+    }
+  ]
+}
